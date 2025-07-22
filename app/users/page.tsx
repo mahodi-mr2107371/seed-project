@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Search, Plus, Home, PlayCircle, Users, Settings, User } from 'lucide-react';
 import UserTable from '@/components/user-table';
 import UserCard from '@/components/user-card';
@@ -33,14 +33,19 @@ const Members = () => {
     ];
 
     // Store users in localStorage for persistence
-    localStorage.setItem('users', JSON.stringify(users));
+    useEffect(() => {
+        localStorage.setItem('users', JSON.stringify(users));
+    }, [users]);
 
+    // Active tab filtering logic
     const filteredUsers = users.filter(user => {
         const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             user.email.toLowerCase().includes(searchTerm.toLowerCase());
 
         if (activeTab === 'Instructors') {
             return matchesSearch && user.role === 'Instructor';
+        } else if (activeTab === 'Students') {
+            return matchesSearch && user.role === 'Student';
         }
         return matchesSearch;
     });
