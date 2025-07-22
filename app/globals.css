@@ -4,6 +4,12 @@
 *{
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
+button:hover{
+  opacity: 0.8;
+}
+li:hover{
+  color: var(--theme-accent);
+}
 :root {
   /* Light mode colors */
   --theme-bg: #FFFFFF;

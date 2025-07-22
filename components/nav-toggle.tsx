@@ -1,11 +1,14 @@
-import { ChevronsLeftRight } from 'lucide-react';
+import { ChevronsLeftRight, Menu } from 'lucide-react';
 import React from 'react'
-
-const NavToggle = () => {
+type Props = {
+    className?: string;
+    onclick?: () => void;
+}
+const NavToggle = ({ className, onclick }: Props) => {
     return (
-        <div className="hidden md:inline">
-            <button className="p-1 dark:bg-gray-300 dark:text-gray-800 rounded">
-                <ChevronsLeftRight></ChevronsLeftRight>
+        <div className={`md:inline ${className!}`}>
+            <button onClick={onclick} className="p-1 dark:bg-gray-300 dark:text-gray-800 rounded">
+                <ChevronsLeftRight className='w-4 h-4'></ChevronsLeftRight>
             </button>
         </div>
     )
