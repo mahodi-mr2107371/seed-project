@@ -41,20 +41,27 @@ export default function RootLayout({
 
           </Header>
 
-          {/* Theme Toggle Mobile */}
-          <ToggleTheme screenBased="bottom-18 right-5 fixed md:hidden"></ToggleTheme>
+
 
           {/* Main Content + Nav */}
           <div className="w-full h-full flex items-start justify-start flex-1">
 
-            <NavComponent className="h-[84.5%] md:h-[86%]" classNameNavBar=""></NavComponent>
+            {/* Main Content */}
             <main className="h-full w-full p-5">
               {children}
             </main>
+
+            {/* Navbar */}
+            <NavComponent className="h-screen " classNameNavBar=""></NavComponent>
+
           </div>
+
+          {/* Theme Toggle Mobile */}
+          <ToggleTheme screenBased="bottom-18 right-5 fixed md:hidden bg-gray-800 text-gray-300 dark:bg-gray-300 dark:text-gray-800 rounded-full"></ToggleTheme>
 
           {/* Footer */}
           <Footer></Footer>
+
         </div>
       </body>
     </html>
