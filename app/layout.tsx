@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import { Menu } from "lucide-react";
 import NavToggle from "@/components/nav-toggle";
 import NavComponent from "@/components/nav-component";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,21 +42,19 @@ export default function RootLayout({
           </Header>
 
           {/* Theme Toggle Mobile */}
-          <ToggleTheme screenBased="bottom-5 right-5 fixed md:hidden"></ToggleTheme>
+          <ToggleTheme screenBased="bottom-18 right-5 fixed md:hidden"></ToggleTheme>
 
           {/* Main Content + Nav */}
           <div className="w-full h-full flex items-start justify-start flex-1">
 
-            <NavComponent className="h-[90%]" classNameNavBar=""></NavComponent>
+            <NavComponent className="h-[84.5%] md:h-[86%]" classNameNavBar=""></NavComponent>
             <main className="h-full w-full p-5">
               {children}
             </main>
           </div>
 
           {/* Footer */}
-          <footer className="w-full flex justify-center">
-            footer
-          </footer>
+          <Footer></Footer>
         </div>
       </body>
     </html>

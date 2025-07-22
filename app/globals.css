@@ -8,10 +8,17 @@ button:hover{
   opacity: 0.8;
 }
 li:hover{
-  color: var(--theme-accent);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  background-color: var(--hover-bg);
+  color: var(--hover-text);
+}
+li{
+  padding: 1rem;
 }
 :root {
   /* Light mode colors */
+  --hover-bg: #fef3c7;            /* Light amber-100 */
+  --hover-text: #b45309;   
   --theme-bg: #FFFFFF;
   --theme-text: #1F2937;
   --theme-accent: #F59E0B;
@@ -25,6 +32,8 @@ li:hover{
 .dark {
   --theme-bg: var(--theme-dark-bg);
   --theme-text: var(--theme-dark-text);
+  --hover-bg: #78350f;            /* Dark amber-950 */
+  --hover-text: #f59e0b;
 }
 
 /* Custom utility classes */

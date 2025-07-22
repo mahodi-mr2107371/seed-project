@@ -6,12 +6,12 @@ type Props = {
 const NavBar = ({ className }: Props) => {
     return (
         <div className={`flex ${className!}`}>
-            <nav className=" w-50 bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-4">
-                <ul className='flex flex-col gap-5'>
-                    <li className="mb-2"><a href="/dashboard">Dashboard</a></li>
-                    <li className="mb-2"><a href="/courses">Courses</a></li>
-                    <li className="mb-2"><a href="/users">Users</a></li>
-                    <li className="mb-2"><a href="/settings">Settings</a></li>
+            <nav className=" w-50 bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 ">
+                <ul className='flex flex-col'>
+                    <a href="/dashboard"><li>Dashboard</li></a>
+                    <a href="/courses"><li>Courses</li></a>
+                    <a href="/users"><li>Users</li></a>
+                    <a href="/settings"><li>Settings</li></a>
                 </ul>
             </nav>
         </div>

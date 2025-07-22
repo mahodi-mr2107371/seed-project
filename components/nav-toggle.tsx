@@ -1,3 +1,4 @@
+'use client';
 import { ChevronsLeftRight, Menu } from 'lucide-react';
 import React from 'react'
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 const NavToggle = ({ className, onclick }: Props) => {
     return (
         <div className={`md:inline ${className!}`}>
-            <button onClick={onclick} className="p-1 dark:bg-gray-300 dark:text-gray-800 rounded">
+            <button onClick={onclick} className="p-1 dark:bg-gray-300 dark:text-gray-800 bg-gray-500 text-gray-50 rounded">
                 <ChevronsLeftRight className='w-4 h-4'></ChevronsLeftRight>
             </button>
         </div>
