@@ -67,7 +67,7 @@ function UserCard({ users }: Props) {
                                     <span className="truncate">{user.email}</span>
                                 </div>
 
-                                {user.phone && (
+                                {/* {user.phone && (
                                     <div className="flex items-center justify-center text-sm text-gray-600 dark:text-gray-300">
                                         <Phone className="w-4 h-4 mr-2 text-gray-400" />
                                         <span>{user.phone}</span>
@@ -79,7 +79,7 @@ function UserCard({ users }: Props) {
                                         <MapPin className="w-4 h-4 mr-2 text-gray-400" />
                                         <span>{user.location}</span>
                                     </div>
-                                )}
+                                )} */}
 
                                 <div className="flex items-center justify-center text-sm text-gray-600 dark:text-gray-300">
                                     <Calendar className="w-4 h-4 mr-2 text-gray-400" />
@@ -88,7 +88,7 @@ function UserCard({ users }: Props) {
                             </div>
 
                             {/* Stats Section */}
-                            {(user.coursesEnrolled !== undefined || user.coursesCompleted !== undefined) && (
+                            {/* {(user.coursesEnrolled !== undefined || user.coursesCompleted !== undefined) && (
                                 <div className="border-t border-gray-100 dark:border-gray-700 pt-4 mb-4">
                                     <div className="grid grid-cols-2 gap-4">
                                         {user.coursesEnrolled !== undefined && (
@@ -113,16 +113,16 @@ function UserCard({ users }: Props) {
                                         )}
                                     </div>
                                 </div>
-                            )}
+                            )} */}
 
                             {/* Department */}
-                            {user.department && (
+                            {/* {user.department && (
                                 <div className="mb-4">
                                     <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">
                                         {user.department}
                                     </span>
                                 </div>
-                            )}
+                            )} */}
 
                             {/* Status Badge */}
                             <div className="flex justify-center">
@@ -135,13 +135,13 @@ function UserCard({ users }: Props) {
                             </div>
 
                             {/* Last Active */}
-                            {user.lastActive && (
+                            {/* {user.lastActive && (
                                 <div className="mt-2">
                                     <span className="text-xs text-gray-400 dark:text-gray-500">
                                         Last active: {user.lastActive}
                                     </span>
                                 </div>
-                            )}
+                            )} */}
                         </div>
 
                         {/* Action Buttons */}
