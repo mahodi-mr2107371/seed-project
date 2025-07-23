@@ -58,9 +58,9 @@ const Courses = () => {
                 <div className="border-b px-6 py-4">
                     <div className="flex justify-between items-center mb-4">
                         <h1 className="text-2xl font-bold">Courses</h1>
-                        {/* <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2">
-                            Add member
-                        </button> */}
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2">
+                            Add Course
+                        </button>
                     </div>
 
                     {/* Tabs */}

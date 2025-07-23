@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="https://img.icons8.com/emoji/96/seedling.png" alt="Seed Logo" width="100" />
+</p>
 
-## Getting Started
+<h1 align="center">🌱 Seed Project</h1>
 
-First, run the development server:
+<p align="center">
+  A modern starter boilerplate for your next full-stack web app, built using <strong>Next.js</strong>, <strong>Tailwind CSS</strong>, and <strong>TypeScript</strong>.
+</p>
+
+<p align="center">
+  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white" /></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" /></a>
+</p>
+
+---
+
+## 🧠 Features
+
+- ⚡️ Next.js App Router with TypeScript
+- 🎨 Tailwind CSS for styling
+- 🌘 Dark mode support
+- 🧩 Reusable components using `shadcn/ui` & Lucide Icons
+- 📦 Modular architecture for scalability
+- 🧪 Easily extensible and developer-friendly
+
+---
+
+## 🖥️ Tech Stack
+
+| Tech            | Usage                              |
+|-----------------|-------------------------------------|
+| [Next.js](https://nextjs.org/) | React Framework with App Router |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS framework |
+| [TypeScript](https://www.typescriptlang.org/) | Static typing for JavaScript |
+| [shadcn/ui](https://ui.shadcn.com/) | Reusable, accessible UI components |
+| [Lucide Icons](https://lucide.dev/) | Icon library for React |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/mahodi-mr2107371/seed-project.git
 ```
+#
+### 2. Install dependencies
+```bash
+cd seed-project
+npm install
+```
+#### or
+```bash
+yarn install
+```
+#
+### 3. Run the Development Server
+```bash
+npm run dev
+```
+#### or
+```bash
+yarn dev
+```
+#
+📁 Folder Structure
+```bash
+.
+├── app/              # Next.js App directory and global styles
+├── components/       # Shared and reusable components
+├── lib/              # Utility and helper functions
+├── public/           # Static files
+└── ...
+```
+#
+### Challege/insight
+Callenging aspects
+- Figma Design: It was diffiuclt to come up with a design but it ended up being the most enjoyable part because of the flexibility of the assignmnet
+- Choosing the theme was another challenge as the figma design was complete
+- Deciding whether to implement authentication and/or backend was another brain teaser as the assingment only asked for admin dashboard but my eagerness wanted to build more. Eventually ended up only making the frontend with minimal functionality like theme.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Insight
+- Using libraries made things much easier when it came to making charts, tables, and cards.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#
+🌗 Theme
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ Support
+The project supports light and dark themes. Easily toggle between themes using the included ToggleTheme component.
+#
+🙋‍♂️ Author
 
-## Learn More
+Made by Mahodi Hasan
 
-To learn more about Next.js, take a look at the following resources:
+<a href="https://github.com/mahodi-mr2107371/seed-project/stargazers"><img src="https://img.shields.io/github/stars/mahodi-mr2107371/seed-project?style=social" /></a>
+<a href="https://github.com/mahodi-mr2107371/seed-project/network/members"><img src="https://img.shields.io/github/forks/mahodi-mr2107371/seed-project?style=social" /></a>
+#
+🌍 Contribute
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions, issues, and feature requests are welcome!
+Feel free to check <a href="https://github.com/mahodi-mr2107371/seed-project/issues">issues page</a>.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
