@@ -1,6 +1,6 @@
-import { CourseStatusRadialChart } from '@/components/course_chart';
+import { CourseStatusRadialChart } from '@/components/course-chart';
 import { SummaryCards } from '@/components/summary-cards';
-import { UsersChart } from '@/components/users_chart';
+import { UsersChart } from '@/components/users-chart';
 import { LatestCoursesTable } from '@/components/latest-courses-table';
 import { NewSignupsCard } from '@/components/new-signups-card';
 import React from 'react'
