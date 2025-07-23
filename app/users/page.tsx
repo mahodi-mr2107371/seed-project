@@ -77,6 +77,12 @@ const Members = () => {
                         >
                             Instructors
                         </button>
+                        <button
+                            onClick={() => setActiveTab('Students')}
+                            className={`pb-2 border-b-2 font-medium ${activeTab === 'Students' ? 'border-blue-500 text-blue-600' : 'border-transparent  hover:text-gray-700 dark:hover:text-gray-300'}`}
+                        >
+                            Students
+                        </button>
                     </div>
 
                     {/* Search */}

@@ -3,45 +3,43 @@ import React, { useState } from 'react';
 import { Search, Plus, Home, PlayCircle, Users, Settings, User } from 'lucide-react';
 import UserTable from '@/components/user-table';
 import UserCard from '@/components/user-card';
+import CourseTable from '@/components/course-table';
 
-type User = {
-    id: number;
-    name: string;
-    email: string;
-    role: string;
-    status: 'Active' | 'Inactive';
-    joined: string;
-    avatar: string;
+type Course = {
+    course_name: string;
+    category: string;
+    instuctor: string;
+    status: 'Published' | 'Draft';
 }
 
 const Courses = () => {
-    const [activeTab, setActiveTab] = useState('All members');
+    const [activeTab, setActiveTab] = useState('All Courses');
     const [searchTerm, setSearchTerm] = useState('');
 
+    function edit() {
+
+    }
+
     // Sample user data matching the image
-    const users: User[] = [
-        { id: 1, name: 'Sophia Clark', email: 'sophia.clark@email.com', role: 'Student', status: 'Active', joined: '2023-01-15', avatar: '👩🏻‍💼' },
-        { id: 2, name: 'Ethan Bennett', email: 'ethan.bennett@email.com', role: 'Instructor', status: 'Active', joined: '2022-11-20', avatar: '👨🏻‍🏫' },
-        { id: 3, name: 'Olivia Hayes', email: 'olivia.hayes@email.com', role: 'Instructor', status: 'Active', joined: '2023-03-05', avatar: '👩🏻‍🎓' },
-        { id: 4, name: 'Liam Foster', email: 'liam.foster@email.com', role: 'Student', status: 'Active', joined: '2023-02-10', avatar: '👨🏻‍🎓' },
-        { id: 5, name: 'Ava Mitchell', email: 'ava.mitchell@email.com', role: 'Instructor', status: 'Active', joined: '2022-12-01', avatar: '👩🏻‍🏫' },
-        { id: 6, name: 'Noah Carter', email: 'noah.carter@email.com', role: 'Student', status: 'Active', joined: '2023-01-22', avatar: '👨🏻‍🎓' },
-        { id: 7, name: 'Isabella Reed', email: 'isabella.reed@email.com', role: 'Student', status: 'Inactive', joined: '2023-03-15', avatar: '👩🏻‍🎓' },
-        { id: 8, name: 'Jackson Cole', email: 'jackson.cole@email.com', role: 'Instructor', status: 'Active', joined: '2022-11-28', avatar: '👨🏻‍🏫' },
-        { id: 9, name: 'Mia Harper', email: 'mia.harper@email.com', role: 'Instructor', status: 'Active', joined: '2023-02-18', avatar: '👩🏻‍🎓' },
-        { id: 10, name: 'Aiden Brooks', email: 'aiden.brooks@email.com', role: 'Student', status: 'Inactive', joined: '2023-01-05', avatar: '👨🏻‍🎓' }
+    const courses: Course[] = [
+        { course_name: 'Introduction to React', category: 'Web Development', instuctor: 'John Doe', status: 'Published' },
+        { course_name: 'Advanced JavaScript', category: 'Programming', instuctor: 'Jane Smith', status: 'Draft' },
+        { course_name: 'Data Science with Python', category: 'Data Science', instuctor: 'Alice Johnson', status: 'Published' },
+        { course_name: 'Machine Learning Basics', category: 'AI & ML', instuctor: 'Bob Brown', status: 'Draft' },
+        { course_name: 'Full Stack Development', category: 'Web Development', instuctor: 'Charlie Davis', status: 'Published' },
+        { course_name: 'Mobile App Development', category: 'Mobile', instuctor: 'Emily Wilson', status: 'Draft' },
+        { course_name: 'Cloud Computing Essentials', category: 'Cloud', instuctor: 'David Lee', status: 'Published' },
     ];
-    // Store users in localStorage for persistence
-    localStorage.setItem('users', JSON.stringify(users));
 
-    const filteredUsers = users.filter(user => {
-        const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            user.email.toLowerCase().includes(searchTerm.toLowerCase());
 
-        if (activeTab === 'Instructors') {
-            return matchesSearch && user.role === 'Instructor';
-        } else if (activeTab === 'Students') {
-            return matchesSearch && user.role === 'Student';
+    const filteredCourses = courses.filter(course => {
+        const matchesSearch = course.course_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            course.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+        if (activeTab === 'Published') {
+            return matchesSearch && course.status === 'Published';
+        } else if (activeTab === 'Draft') {
+            return matchesSearch && course.status === 'Draft';
         }
         return matchesSearch;
     });
@@ -53,7 +51,7 @@ const Courses = () => {
                 {/* Header */}
                 <div className="border-b px-6 py-4">
                     <div className="flex justify-between items-center mb-4">
-                        <h1 className="text-2xl font-bold">Members</h1>
+                        <h1 className="text-2xl font-bold">Courses</h1>
                         {/* <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 flex items-center gap-2">
                             Add member
                         </button> */}
@@ -62,22 +60,22 @@ const Courses = () => {
                     {/* Tabs */}
                     <div className="flex gap-6 mb-4">
                         <button
-                            onClick={() => setActiveTab('All members')}
-                            className={`pb-2 border-b-2 font-medium ${activeTab === 'All members' ? 'border-blue-500 text-blue-600' : 'border-transparent  hover:text-amber-700 dark:hover:text-gray-300'}`}
+                            onClick={() => setActiveTab('All Courses')}
+                            className={`pb-2 border-b-2 font-medium ${activeTab === 'All Courses' ? 'border-blue-500 text-blue-600' : 'border-transparent  hover:text-amber-700 dark:hover:text-gray-300'}`}
                         >
-                            All members
+                            All Courses
                         </button>
                         <button
-                            onClick={() => setActiveTab('Instructors')}
-                            className={`pb-2 border-b-2 font-medium ${activeTab === 'Instructors' ? 'border-blue-500 text-blue-600' : 'border-transparent  hover:text-gray-700 dark:hover:text-gray-300'}`}
+                            onClick={() => setActiveTab('Published')}
+                            className={`pb-2 border-b-2 font-medium ${activeTab === 'Published' ? 'border-blue-500 text-blue-600' : 'border-transparent  hover:text-gray-700 dark:hover:text-gray-300'}`}
                         >
-                            Instructors
+                            Published
                         </button>
                         <button
-                            onClick={() => setActiveTab('Students')}
-                            className={`pb-2 border-b-2 font-medium ${activeTab === 'Students' ? 'border-blue-500 text-blue-600' : 'border-transparent  hover:text-gray-700 dark:hover:text-gray-300'}`}
+                            onClick={() => setActiveTab('Draft')}
+                            className={`pb-2 border-b-2 font-medium ${activeTab === 'Draft' ? 'border-blue-500 text-blue-600' : 'border-transparent  hover:text-gray-700 dark:hover:text-gray-300'}`}
                         >
-                            Students
+                            Draft
                         </button>
                     </div>
 
@@ -96,13 +94,13 @@ const Courses = () => {
 
                 {/* Table Desktop View */}
                 <div className="hidden md:flex md:flex-1 md:overflow-auto">
-                    <UserTable users={filteredUsers}></UserTable>
+                    <CourseTable courses={filteredCourses}></CourseTable>
                 </div>
 
                 {/* Table mobile view */}
-                <div className="md:hidden flex-1 overflow-auto">
+                {/* <div className="md:hidden flex-1 overflow-auto">
                     <UserCard users={filteredUsers}></UserCard>
-                </div>
+                </div> */}
             </div>
         </div>
     );
