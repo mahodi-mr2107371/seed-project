@@ -58,10 +58,8 @@ export default function RootLayout({
 
           {/* Theme Toggle Mobile */}
           <ToggleTheme screenBased="bottom-18 right-5 fixed md:hidden bg-gray-800 text-gray-300 dark:bg-gray-300 dark:text-gray-800 rounded-full"></ToggleTheme>
-
           {/* Footer */}
           <Footer></Footer>
-
         </div>
       </body>
     </html>

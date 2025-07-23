@@ -6,6 +6,7 @@ type Course = {
     category: string;
     instuctor: string;
     status: 'Published' | 'Draft';
+    date_published?: string;
 }
 
 type Props = {
@@ -21,21 +22,6 @@ function CourseCard({ courses }: Props) {
                         key={course.course_name}
                         className=" rounded-xl shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden group"
                     >
-                        {/* Header with Avatar and Status */}
-                        {/* <div className="relative bg-gradient-to-r from-blue-500 to-purple-600 h-20">
-                            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
-                                <div className="relative">
-                                    <div className="absolute -top-1 -right-1">
-                                        {course.status === 'Published' ? (
-                                            <CheckCircle className="w-4 h-4 text-green-500 bg-white rounded-full" />
-                                        ) : (
-                                            <XCircle className="w-4 h-4 text-red-500 bg-white rounded-full" />
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
-
                         {/* Main Content */}
                         <div className="pt-8 pb-6 px-6 text-center">
                             {/* Name and Role */}
@@ -65,6 +51,9 @@ function CourseCard({ courses }: Props) {
                                     {course.status}
                                 </span>
                             </div>
+                        </div>
+                        <div className="flex justify-center mb-4">
+                            published: {course.date_published}
                         </div>
 
                         {/* Action Buttons */}
