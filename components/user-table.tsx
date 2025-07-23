@@ -1,7 +1,15 @@
 import React from 'react'
-
+type User = {
+    id: number;
+    name: string;
+    email: string;
+    role: string;
+    status: 'Active' | 'Inactive';
+    joined: string;
+    avatar: string;
+}
 type Props = {
-    users: any[];
+    users: User[];
 }
 
 function UserTable({ users }: Props) {
@@ -31,16 +39,16 @@ function UserTable({ users }: Props) {
                             <td className="py-4 px-6">{user.email}</td>
                             <td className="py-4 px-6">
                                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${user.role === 'Instructor'
-                                        ? 'bg-purple-100 text-purple-800'
-                                        : 'bg-blue-100 text-blue-800'
+                                    ? 'bg-purple-100 text-purple-800'
+                                    : 'bg-blue-100 text-blue-800'
                                     }`}>
                                     {user.role}
                                 </span>
                             </td>
                             <td className="py-4 px-6">
                                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${user.status === 'Active'
-                                        ? 'bg-green-100 text-green-800'
-                                        : 'bg-red-800 text-red-100'
+                                    ? 'bg-green-100 text-green-800'
+                                    : 'bg-red-800 text-red-100'
                                     }`}>
                                     {user.status}
                                 </span>

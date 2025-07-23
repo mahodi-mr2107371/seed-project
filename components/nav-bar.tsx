@@ -1,7 +1,7 @@
 import React from 'react'
 import NavToggle from './nav-toggle';
 type Props = {
-    className?: String;
+    className?: string;
 }
 const NavBar = ({ className }: Props) => {
     return (

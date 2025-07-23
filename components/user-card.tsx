@@ -1,9 +1,18 @@
 import React from 'react';
 import { Mail, Calendar, User, CheckCircle, XCircle, MapPin, Phone } from 'lucide-react';
 
+type User = {
+    id: number;
+    name: string;
+    email: string;
+    role: string;
+    status: 'Active' | 'Inactive';
+    joined: string;
+    avatar: string;
+}
 
 type Props = {
-    users?: any[];
+    users?: User[];
 }
 
 function UserCard({ users }: Props) {
