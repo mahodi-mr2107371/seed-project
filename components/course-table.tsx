@@ -36,10 +36,10 @@ function CourseTable({ courses }: Props) {
                             <td className="py-4 px-6">{course.instuctor}</td>
                             <td className="py-4 px-6">
                                 <span className={`px-3 py-1 rounded-full text-sm font-medium ${course.status === 'Published'
-                                        ? 'bg-green-100 text-green-800'
-                                        : course.status === 'Draft'
-                                            ? 'bg-orange-100 text-orange-800'
-                                            : 'bg-gray-100 text-gray-800'
+                                    ? 'bg-green-100 text-green-800'
+                                    : course.status === 'Draft'
+                                        ? 'bg-orange-100 text-orange-800'
+                                        : 'bg-gray-100 text-gray-800'
                                     }`}>
                                     {course.status}
                                 </span>
@@ -47,7 +47,7 @@ function CourseTable({ courses }: Props) {
                             <td className="py-4 px-6">
                                 <div className='flex gap-2'>
                                     <button
-                                        className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors duration-200"
+                                        className="p-1 hover:bg-gray-200 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-100 rounded transition-colors duration-200"
                                         title="Edit course"
                                     >
                                         <Edit className="w-4 h-4" />
