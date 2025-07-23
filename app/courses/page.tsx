@@ -4,6 +4,7 @@ import { Search, Plus, Home, PlayCircle, Users, Settings, User } from 'lucide-re
 import UserTable from '@/components/user-table';
 import UserCard from '@/components/user-card';
 import CourseTable from '@/components/course-table';
+import CourseCard from '@/components/course-card';
 
 type Course = {
     course_name: string;
@@ -97,10 +98,10 @@ const Courses = () => {
                     <CourseTable courses={filteredCourses}></CourseTable>
                 </div>
 
-                {/* Table mobile view */}
-                {/* <div className="md:hidden flex-1 overflow-auto">
-                    <UserCard users={filteredUsers}></UserCard>
-                </div> */}
+                {/* Card mobile view */}
+                <div className="md:hidden flex-1 overflow-auto">
+                    <CourseCard courses={filteredCourses}></CourseCard>
+                </div>
             </div>
         </div>
     );
