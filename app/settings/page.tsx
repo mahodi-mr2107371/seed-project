@@ -171,7 +171,7 @@ const Settings = () => {
     ];
 
     return (
-        <div className="flex flex-col h-screen">
+        <div className="flex overflow-auto flex-col h-screen">
             {/* Header */}
             <header className="px-6 py-4 border-b">
                 <div className="max-w-4xl mx-auto">

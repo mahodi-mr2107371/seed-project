@@ -1,9 +1,3 @@
-import Header from "@/components/header";
-import NavBar from "@/components/nav-bar";
-import NavComponent from "@/components/nav-component";
-import NavToggle from "@/components/nav-toggle";
-import ToggleTheme from "@/components/toggle-theme";
-import Image from "next/image";
 import Dashboard from "./dashboard/page";
 
 export default function Home() {

@@ -13,77 +13,63 @@ type Course = {
     created_at: string;
 }
 
-const generateDummyCourses = (): Course[] => {
-    return [
-        {
-            id: "1",
-            course_name: "Advanced React Development",
-            instructor: "Dr. Sarah Johnson",
-            enrolled_students: 245,
-            status: "Published",
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
-        },
-        {
-            id: "2",
-            course_name: "Python for Data Science",
-            instructor: "Prof. Michael Chen",
-            enrolled_students: 189,
-            status: "Published",
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
-        },
-        {
-            id: "3",
-            course_name: "UI/UX Design Fundamentals",
-            instructor: "Emily Rodriguez",
-            enrolled_students: 92,
-            status: "Draft",
-            created_at: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString()
-        },
-        {
-            id: "4",
-            course_name: "Machine Learning Basics",
-            instructor: "Dr. James Wilson",
-            enrolled_students: 156,
-            status: "Published",
-            created_at: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
-        },
-        {
-            id: "5",
-            course_name: "Web Security Essentials",
-            instructor: "Alex Thompson",
-            enrolled_students: 78,
-            status: "Published",
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
-        }
-    ];
-};
+// const generateDummyCourses = (): Course[] => {
+//     return [
+//         {
+//             id: "1",
+//             course_name: "Advanced React Development",
+//             instructor: "Dr. Sarah Johnson",
+//             enrolled_students: 245,
+//             status: "Published",
+//             created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
+//         },
+//         {
+//             id: "2",
+//             course_name: "Python for Data Science",
+//             instructor: "Prof. Michael Chen",
+//             enrolled_students: 189,
+//             status: "Published",
+//             created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
+//         },
+//         {
+//             id: "3",
+//             course_name: "UI/UX Design Fundamentals",
+//             instructor: "Emily Rodriguez",
+//             enrolled_students: 92,
+//             status: "Draft",
+//             created_at: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString()
+//         },
+//         {
+//             id: "4",
+//             course_name: "Machine Learning Basics",
+//             instructor: "Dr. James Wilson",
+//             enrolled_students: 156,
+//             status: "Published",
+//             created_at: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
+//         },
+//         {
+//             id: "5",
+//             course_name: "Web Security Essentials",
+//             instructor: "Alex Thompson",
+//             enrolled_students: 78,
+//             status: "Published",
+//             created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
+//         }
+//     ];
+// };
 
 export function LatestCoursesTable() {
     const [courses, setCourses] = useState<Course[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
 
+    // getting latest courses from localStorage for persistence
     useEffect(() => {
-        setTimeout(() => {
-            setCourses(generateDummyCourses());
-            setIsLoading(false);
-        }, 500);
+        const storedCourses = localStorage.getItem('courses');
+
+        if (storedCourses) {
+            setCourses(JSON.parse(storedCourses));
+        }
     }, []);
 
-    if (isLoading) {
-        return (
-            <Card>
-                <CardHeader>
-                    <CardTitle>Latest Courses</CardTitle>
-                    <CardDescription>Recently added courses</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <div className="flex items-center justify-center h-64">
-                        <div className="text-muted-foreground">Loading...</div>
-                    </div>
-                </CardContent>
-            </Card>
-        );
-    }
 
     return (
         <Card className="hover:shadow-lg transition-shadow duration-300">
@@ -120,8 +106,8 @@ export function LatestCoursesTable() {
                                     </td>
                                     <td className="p-4 text-right">
                                         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold transition-all duration-200 hover:scale-105 ${course.status === 'Published'
-                                                ? 'bg-green-100 text-green-800 hover:bg-green-200'
-                                                : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                                            ? 'bg-green-100 text-green-800 hover:bg-green-200'
+                                            : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
                                             }`}>
                                             {course.status}
                                         </span>
@@ -144,8 +130,8 @@ export function LatestCoursesTable() {
                                     {course.course_name}
                                 </h3>
                                 <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${course.status === 'Published'
-                                        ? 'bg-green-100 text-green-800'
-                                        : 'bg-gray-100 text-gray-800'
+                                    ? 'bg-green-100 text-green-800'
+                                    : 'bg-gray-100 text-gray-800'
                                     }`}>
                                     <Circle className={`w-2 h-2 mr-1 fill-current ${course.status === 'Published' ? 'text-green-600' : 'text-gray-600'
                                         }`} />

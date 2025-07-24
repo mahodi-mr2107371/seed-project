@@ -17,25 +17,16 @@ type Course = {
 const Courses = () => {
     const [activeTab, setActiveTab] = useState('All Courses');
     const [searchTerm, setSearchTerm] = useState('');
+    const [courses, setCourses] = useState([] as Course[]);;
 
-    function edit() {
-
-    }
-
-    // Sample user data matching the image
-    const courses: Course[] = [
-        { course_name: 'Introduction to React', category: 'Web Development', instuctor: 'John Doe', status: 'Published', date_published: Date().slice(0, 21) },
-        { course_name: 'Advanced JavaScript', category: 'Programming', instuctor: 'Jane Smith', status: 'Draft', date_published: Date().slice(0, 21) },
-        { course_name: 'Data Science with Python', category: 'Data Science', instuctor: 'Alice Johnson', status: 'Published', date_published: Date().slice(0, 21) },
-        { course_name: 'Machine Learning Basics', category: 'AI & ML', instuctor: 'Bob Brown', status: 'Draft', date_published: Date().slice(0, 21) },
-        { course_name: 'Full Stack Development', category: 'Web Development', instuctor: 'Charlie Davis', status: 'Published', date_published: Date().slice(0, 21) },
-        { course_name: 'Mobile App Development', category: 'Mobile', instuctor: 'Emily Wilson', status: 'Draft', date_published: Date().slice(0, 21) },
-        { course_name: 'Cloud Computing Essentials', category: 'Cloud', instuctor: 'David Lee', status: 'Published', date_published: Date().slice(0, 21) },
-    ];
-    // Store courses in localStorage for persistence
+    // getting courses from localStorage for persistence
     useEffect(() => {
-        localStorage.setItem('courses', JSON.stringify(courses));
-    }, [courses]);
+        const storedCourses = localStorage.getItem('courses');
+
+        if (storedCourses) {
+            setCourses(JSON.parse(storedCourses));
+        }
+    }, []);
 
 
     const filteredCourses = courses.filter(course => {
