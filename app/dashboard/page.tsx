@@ -7,7 +7,7 @@ import React from 'react'
 
 const Dashboard = () => {
     return (
-        <div className='flex flex-col h-screen'>
+        <div className='flex flex-col h-screen overflow-auto'>
             {/* Header */}
             <header className="px-6 py-4">
                 <div className="max-w-7xl mx-auto">
@@ -16,7 +16,7 @@ const Dashboard = () => {
             </header>
 
             {/* Main Content */}
-            <main className='flex-1 overflow-auto '>
+            <main className='flex-1  '>
                 <div className='max-w-7xl mx-auto p-6 space-y-8'>
                     {/* Summary Cards Section */}
                     <section>
