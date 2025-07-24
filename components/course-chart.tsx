@@ -137,14 +137,16 @@ export function CourseStatusRadialChart() {
                     {publishedPercentage}% of courses are published
                 </div>
                 <div className="flex flex-col gap-1 text-muted-foreground leading-none">
-                    <span>
+                    <span className=" flex gap-1">
                         <span className="w-3 h-3 rounded-full bg-blue-600 inline-block"></span>
-                        Published: {publishedCount} courses</span>
-                    <span>
-                        <span className="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
-                        Draft: {draftCount} courses</span>
-                </div>
+                        Published: {publishedCount} courses
+                    </span>
+                    <span className=" flex gap-1">
 
+                        <span className="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                        Draft: {draftCount} courses
+                    </span>
+                </div>
             </CardFooter>
         </Card>
     )
