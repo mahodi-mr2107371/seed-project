@@ -77,7 +77,7 @@ yarn dev
 ```
 #
 ### Challege/insight
-Callenging aspects
+Challenging aspects
 - Figma Design: It was diffiuclt to come up with a design but it ended up being the most enjoyable part because of the flexibility of the assignmnet
 - Choosing the theme was another challenge as the figma design was complete
 - Deciding whether to implement authentication and/or backend was another brain teaser as the assingment only asked for admin dashboard but my eagerness wanted to build more. Eventually ended up only making the frontend with minimal functionality like theme.
