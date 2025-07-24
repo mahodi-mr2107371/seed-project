@@ -81,6 +81,7 @@ Challenging aspects
 - Figma Design: It was diffiuclt to come up with a design but it ended up being the most enjoyable part because of the flexibility of the assignmnet
 - Choosing the theme was another challenge as the figma design was complete
 - Deciding whether to implement authentication and/or backend was another brain teaser as the assingment only asked for admin dashboard but my eagerness wanted to build more. Eventually ended up only making the frontend with minimal functionality like theme.
+- Scroll bar issue in Dashboard, Users and Courses, where I set the overflow property to auto to handle overflow but it creates a scroll bar aside from the scrollbar for the page. So there are 2 scroll bars in the page.
 
 Insight
 - Using libraries made things much easier when it came to making charts, tables, and cards.

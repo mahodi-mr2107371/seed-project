@@ -15,7 +15,6 @@ type Course = {
 
 
 export function LatestCoursesTable() {
-
     const [courses, setCourses] = useState<Course[]>([]);
     // getting latest courses from localStorage for persistence
     useEffect(() => {
