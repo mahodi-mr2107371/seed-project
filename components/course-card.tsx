@@ -52,9 +52,9 @@ function CourseCard({ courses }: Props) {
                                 </span>
                             </div>
                         </div>
-                        <div className="flex justify-center mb-4">
-                            published: {course.date_published}
-                        </div>
+                        {/* <div className="flex justify-center mb-4">
+                            created at: {course.date_published}
+                        </div> */}
 
                         {/* Action Buttons */}
                         <div className="px-6 pb-6">

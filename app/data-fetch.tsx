@@ -19,7 +19,7 @@ export default function DataFetch() {
 
     }, [courses]);
     // Course fetching logic
-    courses
+    latestCourses
     useEffect(() => {
         localStorage.setItem('latestCourses', JSON.stringify(latestCourses));
         // console.log(latestCourses);

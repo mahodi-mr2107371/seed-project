@@ -67,7 +67,7 @@ export function UsersChart() {
     }]
 
     return (
-        <Card className="flex flex-col hover:shadow-lg transition-shadow duration-200">
+        <Card className="flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <CardHeader className="items-center pb-0">
                 <CardTitle>User Status Overview</CardTitle>
                 <CardDescription>Distribution of Active and Inactive Users</CardDescription>

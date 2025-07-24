@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 type WeeklySignup = {
     day: string;
     count: number;
-    isToday?: boolean; // Added this property to the type
+    isToday?: boolean;
 }
 
 // Generate dummy signup data for the week

@@ -12,9 +12,10 @@ const Header = ({ children, className }: Props) => {
             {/* Header Flex Container */}
             <div className='flex md:gap-10 justify-between items-center'>
 
-                <img src="/images/download.png" alt="Logo" className='w-10 h-10 rounded-full' />
-
-
+                <div className='flex items-center gap-2 text-theme-text dark:text-theme-dark-text'>
+                    <img src="/images/download.png" alt="Logo" className='w-10 h-10 rounded-full' />
+                    <b>Mahodi Hasan</b>
+                </div>
 
                 {/* Desktop View */}
                 <div className='flex gap-5 bg-theme-dark-bg dark:bg-theme--bg'>

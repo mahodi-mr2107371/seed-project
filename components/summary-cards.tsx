@@ -88,7 +88,7 @@ export function SummaryCards() {
                 const TrendIcon = isPositive ? TrendingUp : TrendingDown;
 
                 return (
-                    <Card key={index} className="hover:shadow-lg transition-shadow duration-200">
+                    <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium text-muted-foreground">
                                 {item.title}
