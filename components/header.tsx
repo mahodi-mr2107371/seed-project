@@ -18,7 +18,7 @@ const Header = ({ children, className }: Props) => {
                 </div>
 
                 {/* Desktop View */}
-                <div className='flex gap-5 bg-theme-dark-bg dark:bg-theme--bg'>
+                <div className='hidden md:flex gap-5 bg-theme-dark-bg dark:bg-theme--bg'>
                     <h1><b>E-learning</b></h1>
                 </div>
 
