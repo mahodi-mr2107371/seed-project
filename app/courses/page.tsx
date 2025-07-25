@@ -1,8 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { Search, Plus, Home, PlayCircle, Users, Settings, User } from 'lucide-react';
-import UserTable from '@/components/user-table';
-import UserCard from '@/components/user-card';
 import CourseTable from '@/components/course-table';
 import CourseCard from '@/components/course-card';
 
